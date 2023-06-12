@@ -1,14 +1,14 @@
-import ReportBreaker
-import report.PDFReport as PDFReport
+from breakers.ReportBreaker import ReportBreaker
+from report.PDFReport import PDFReport
 
 class PDFBreaker(ReportBreaker):
 
     def __init__(self):
-        super().__init__(PDFReport)
+        super().__init__(self, PDFReport)
 
     def extract_content(self):
         if self.report is None:
-            return 
+            return
         
         texts = self.extract_texts()
         images = self.extract_images()

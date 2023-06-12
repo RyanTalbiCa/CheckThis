@@ -1,7 +1,7 @@
-import report_types.ReportType as ReportType
+from report_types.ReportType import ReportType
 
 
-import report.Report as Report
+from report.Report import Report
 
 class ReportBreaker:
     """ This class is meant to be the base class to specialized report breakers.
