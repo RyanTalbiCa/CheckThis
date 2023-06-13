@@ -27,7 +27,7 @@ class PDFBreaker(ReportBreaker):
         pages_images = {}
 
         for index, page in enumerate(self.report.pages):
-            pages_images[index] = page.extract_tables()
+            pages_images[index] = page.images
 
         return pages_images
 
