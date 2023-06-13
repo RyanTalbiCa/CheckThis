@@ -1,6 +1,7 @@
 from breakers.ReportBreaker import ReportBreaker
 from report.PDFReport import PDFReport
 
+
 class PDFBreaker(ReportBreaker):
 
     def __init__(self):
