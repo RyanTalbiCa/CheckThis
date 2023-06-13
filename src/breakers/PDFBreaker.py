@@ -4,7 +4,7 @@ from report.PDFReport import PDFReport
 class PDFBreaker(ReportBreaker):
 
     def __init__(self):
-        super().__init__(self, PDFReport)
+        super().__init__(PDFReport)
 
     def extract_content(self):
         if self.report is None:
@@ -18,18 +18,23 @@ class PDFBreaker(ReportBreaker):
     def extract_texts(self):
         pages_texts = {}
 
-        for index, page in self.report.pages:
+        for index, page in enumerate(self.report.pages):
             pages_texts[index] = page.extract_text()
+
+        return pages_texts
 
     def extract_images(self):
         pages_images = {}
 
-        for index, page in self.report.pages:
+        for index, page in enumerate(self.report.pages):
             pages_images[index] = page.extract_tables()
+
+        return pages_images
 
     def extract_arrays(self):
         pages_arrays = {}
         
-        for index, page in self.report.pages:
+        for index, page in enumerate(self.report.pages):
             pages_arrays[index] = page.images
-
+        
+        return pages_arrays

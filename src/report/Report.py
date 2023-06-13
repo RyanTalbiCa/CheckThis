@@ -8,7 +8,10 @@ class Report:
     def __init__(self, report_type : ReportType, path : str = ""):
         self.report_type = report_type
         self.path = path
-        self.report_content = {}
+        self.report_content = None
 
     def load(self):
         raise NotImplemented("The load method must be redefined in Report subclasses...")
+    
+    def get_report_content(self):
+        return self.report_content

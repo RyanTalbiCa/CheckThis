@@ -13,12 +13,12 @@ class ReportBreaker:
         self.report_type = report_type
 
     def load_report(self, report : Report):
-        self.report = report
+        self.report = report.get_report_content()
 
     def check_report_type(self):
         if self.report.report_type is self.report_type:
             return
-        raise TypeError("")
+        raise TypeError("The report type does not mach the breaker expected input.")
 
     def extract_content(self):
         raise NotImplemented("This function must be redefined in ReportBreaker subclasses.")
