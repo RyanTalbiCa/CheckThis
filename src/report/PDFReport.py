@@ -1,6 +1,6 @@
 import pdfplumber
 
-
+    
 from report.Report import Report
 from report_types.PDFReportType import PDFReportType
 

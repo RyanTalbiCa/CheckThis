@@ -12,5 +12,5 @@ class ReportType:
     
     def __init__(self, file_format : str):
         self.file_format = file_format
-
+        
 
